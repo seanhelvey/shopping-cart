@@ -3,15 +3,6 @@ import React from 'react';
 const AddItem = (props) => {
     console.log(props)
 
-    let newItem = {
-        product: {
-          id: 40,
-          name: 'Mediocre Iron Watch',
-          priceInCents: 399
-        },
-        quantity: 1
-      }
-
     return (
         <div className="container">
         <form onSubmit={props.addItem}>

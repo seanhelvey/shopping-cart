@@ -29,7 +29,17 @@ class App extends Component {
   addItem = (event) => {
     event.preventDefault()
     console.log("addItem called", event)
-    //TODO: add item to cartList    
+    let newItem = {
+      product: {
+        id: this.state.cartList.length + 1,
+        name: this.state.name,
+        priceInCents: 399
+      },
+      quantity: 1
+    }
+    this.setState({
+      cartList: [...this.state.cartList, newItem]
+    })
   }
 
   selectItem = (event) => {

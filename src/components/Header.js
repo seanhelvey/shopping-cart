@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 
-class App extends Component {
-  render() {
+const Header = () => {
     return (
         <nav className="navbar navbar-dark bg-primary">
         <a className="navbar-brand" href="#">Shopping Cart</a>
         </nav>
     );
-  }
 }
 
-export default App;
+export default Header;

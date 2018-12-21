@@ -42,7 +42,7 @@ class App extends Component {
       <div className="App">
         <Header/>
         <CartItems cartItemsList={cartItemsList}/>
-        <AddItem addItem={this.addItem}/>
+        <AddItem products={this.state.products} addItem={this.addItem}/>
         <Footer copyright={2016}/>
       </div>
     );

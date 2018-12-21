@@ -20,8 +20,15 @@ class App extends Component {
         { id: 46, name: 'Intelligent Leather Clock', priceInCents: 2999 },
         { id: 47, name: 'Ergonomic Bronze Lamp', priceInCents: 40000 },
         { id: 48, name: 'Awesome Leather Shoes', priceInCents: 3990 },
-      ]
+      ],
+      cartList: []
     }
+  }
+
+  addItem = (event) => {
+    event.preventDefault()
+    console.log("addItem called", event)
+    //TODO: add item to cartList    
   }
 
   render() {
@@ -35,7 +42,7 @@ class App extends Component {
       <div className="App">
         <Header/>
         <CartItems cartItemsList={cartItemsList}/>
-        <AddItem/>
+        <AddItem addItem={this.addItem}/>
         <Footer copyright={2016}/>
       </div>
     );

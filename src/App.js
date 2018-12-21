@@ -21,7 +21,8 @@ class App extends Component {
         { id: 47, name: 'Ergonomic Bronze Lamp', priceInCents: 40000 },
         { id: 48, name: 'Awesome Leather Shoes', priceInCents: 3990 },
       ],
-      cartList: []
+      cartList: [],
+      name: ""
     }
   }
 
@@ -29,6 +30,14 @@ class App extends Component {
     event.preventDefault()
     console.log("addItem called", event)
     //TODO: add item to cartList    
+  }
+
+  selectItem = (event) => {
+    event.preventDefault()
+    console.log("selectItem called", event.target.value)
+    this.setState({
+      name: event.target.value
+    })
   }
 
   render() {
@@ -42,7 +51,7 @@ class App extends Component {
       <div className="App">
         <Header/>
         <CartItems cartItemsList={cartItemsList}/>
-        <AddItem products={this.state.products} addItem={this.addItem}/>
+        <AddItem products={this.state.products} addItem={this.addItem} selectItem={this.selectItem}/>
         <Footer copyright={2016}/>
       </div>
     );

@@ -22,8 +22,8 @@ const AddItem = (props) => {
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-            {props.products.map(product => <option key={product.id} value={product.id}>{product.name}</option>)}
+            <select onChange={props.selectItem} class="form-control" id="exampleFormControlSelect1">
+            {props.products.map(product => <option key={product.id} value={product.name}>{product.name}</option>)}
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
